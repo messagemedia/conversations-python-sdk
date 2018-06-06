@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-   message_media_conversations.http.auth.basic_auth
-
-   This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
 
 import base64
 from ...configuration import Configuration
@@ -16,7 +11,7 @@ class BasicAuth:
         """ Add basic authentication to the request.
 
         Args:
-            http_request (HttpRequest): The HttpRequest object to which 
+            http_request (HttpRequest): The HttpRequest object to which
                 authentication will be added.
 
         """

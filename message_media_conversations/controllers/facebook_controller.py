@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.controllers.facebook_controller
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
-
 import logging
 from .base_controller import BaseController
 from ..api_helper import APIHelper
@@ -45,16 +39,16 @@ class FacebookController(BaseController):
         """
         try:
             self.logger.info('create_integrate_facebook_page_using_post called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for create_integrate_facebook_page_using_post.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/facebook/pages/{facebookPageId}/integrate'
-            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, { 
+            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, {
                 'facebookPageId': facebook_page_id
             })
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for create_integrate_facebook_page_using_post.')
             _request = self.http_client.post(_query_url)
@@ -93,19 +87,19 @@ class FacebookController(BaseController):
         """
         try:
             self.logger.info('get_facebook_pages_using_get called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for get_facebook_pages_using_get.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/facebook/pages'
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for get_facebook_pages_using_get.')
             _headers = {
                 'accept': 'application/json'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for get_facebook_pages_using_get.')
             _request = self.http_client.get(_query_url, headers=_headers)
@@ -121,7 +115,7 @@ class FacebookController(BaseController):
             elif _context.response.status_code == 404:
                 raise APIException('Not Found', _context)
             self.validate_response(_context)
-    
+
             # Return appropriate type
             return APIHelper.json_deserialize(_context.response.raw_body, FacebookPagesDto.from_dictionary)
 
@@ -147,19 +141,19 @@ class FacebookController(BaseController):
         """
         try:
             self.logger.info('get_facebook_authorisation_url_using_get called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for get_facebook_authorisation_url_using_get.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/facebook/authorise'
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for get_facebook_authorisation_url_using_get.')
             _headers = {
                 'accept': 'application/json'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for get_facebook_authorisation_url_using_get.')
             _request = self.http_client.get(_query_url, headers=_headers)
@@ -175,7 +169,7 @@ class FacebookController(BaseController):
             elif _context.response.status_code == 404:
                 raise APIException('Not Found', _context)
             self.validate_response(_context)
-    
+
             # Return appropriate type
             return APIHelper.json_deserialize(_context.response.raw_body, FacebookAuthorisationResponse.from_dictionary)
 

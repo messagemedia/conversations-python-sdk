@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.models.facebook_authorisation_response
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
-
 
 class FacebookAuthorisationResponse(object):
 
@@ -53,5 +47,3 @@ class FacebookAuthorisationResponse(object):
 
         # Return an object of this model
         return cls(authorisation_url)
-
-

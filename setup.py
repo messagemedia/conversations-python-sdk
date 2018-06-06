@@ -1,20 +1,21 @@
 from setuptools import setup, find_packages
+from codecs import open
+from os import path
+here = path.abspath(path.dirname(__file__))
 
-# Try to convert markdown README to rst format for PyPI.
-try:
-    import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
-except(IOError, ImportError):
-    long_description = open('README.md').read()
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
-    name='message_media_conversations',
+    name='messagemedia_conversations_sdk',
     version='1.0.0',
-    description='Conversations Api Documentation',
+    description='The Conversations API allows users to communicate by sending and receiving messages via OTT messaging services',
     long_description=long_description,
-    author='APIMatic SDK Generator',
+    author='MessageMedia Developers',
     author_email='support@apimatic.io',
-    url='https://apimatic.io/',
+    url='https://developers.messagemedia.com',
+    download_url='https://github.com/messagemedia/messages-python-sdk',
+    license='Apache-2.0',
     packages=find_packages(),
     install_requires=[
         'requests>=2.9.1, <3.0',

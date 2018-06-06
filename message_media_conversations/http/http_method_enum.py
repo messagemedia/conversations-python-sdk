@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.http.http_method_enum
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
 
 class HttpMethodEnum(object):
 

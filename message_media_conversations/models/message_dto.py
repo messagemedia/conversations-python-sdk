@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.models.message_dto
 
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
 from message_media_conversations.api_helper import APIHelper
 
 class MessageDto(object):
@@ -71,5 +67,3 @@ class MessageDto(object):
                    id,
                    text,
                    timestamp)
-
-

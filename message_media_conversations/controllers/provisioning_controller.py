@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.controllers.provisioning_controller
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
-
 import logging
 from .base_controller import BaseController
 from ..api_helper import APIHelper
@@ -42,19 +36,19 @@ class ProvisioningController(BaseController):
         """
         try:
             self.logger.info('create_provision_account_using_post called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for create_provision_account_using_post.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/provision'
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for create_provision_account_using_post.')
             _headers = {
                 'content-type': 'application/json; charset=utf-8'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for create_provision_account_using_post.')
             _request = self.http_client.post(_query_url, headers=_headers, parameters=APIHelper.json_serialize(request))

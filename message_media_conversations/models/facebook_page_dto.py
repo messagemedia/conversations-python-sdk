@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.models.facebook_page_dto
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
-
 
 class FacebookPageDto(object):
 
@@ -59,5 +53,3 @@ class FacebookPageDto(object):
         # Return an object of this model
         return cls(id,
                    name)
-
-

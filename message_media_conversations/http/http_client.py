@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.http.http_client
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
-
 from .http_request import HttpRequest
 from .http_method_enum import HttpMethodEnum
 

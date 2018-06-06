@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.models.provision_account_request
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
-
 
 class ProvisionAccountRequest(object):
 
@@ -59,5 +53,3 @@ class ProvisionAccountRequest(object):
         # Return an object of this model
         return cls(callback_url,
                    name)
-
-

@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.models.base_message_dto
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
-
 
 class BaseMessageDto(object):
 
@@ -59,5 +53,3 @@ class BaseMessageDto(object):
         # Return an object of this model
         return cls(text,
                    channel)
-
-

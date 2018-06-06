@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.models.messages_dto
 
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
-"""
 import message_media_conversations.models.message_dto
 
 class MessagesDto(object):
@@ -57,5 +53,3 @@ class MessagesDto(object):
 
         # Return an object of this model
         return cls(messages)
-
-

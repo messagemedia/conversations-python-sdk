@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.controllers.app_users_controller
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
-
 import logging
 from .base_controller import BaseController
 from ..api_helper import APIHelper
@@ -47,22 +41,22 @@ class AppUsersController(BaseController):
         """
         try:
             self.logger.info('create_send_message_using_post called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for create_send_message_using_post.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/users/{appUserId}/messages'
-            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, { 
+            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, {
                 'appUserId': app_user_id
             })
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for create_send_message_using_post.')
             _headers = {
                 'content-type': 'application/json; charset=utf-8'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for create_send_message_using_post.')
             _request = self.http_client.post(_query_url, headers=_headers, parameters=APIHelper.json_serialize(message))
@@ -104,22 +98,22 @@ class AppUsersController(BaseController):
         """
         try:
             self.logger.info('get_app_user_messages_using_get called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for get_app_user_messages_using_get.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/users/{appUserId}/messages'
-            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, { 
+            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, {
                 'appUserId': app_user_id
             })
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for get_app_user_messages_using_get.')
             _headers = {
                 'accept': 'application/json'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for get_app_user_messages_using_get.')
             _request = self.http_client.get(_query_url, headers=_headers)
@@ -135,7 +129,7 @@ class AppUsersController(BaseController):
             elif _context.response.status_code == 404:
                 raise APIException('Not Found', _context)
             self.validate_response(_context)
-    
+
             # Return appropriate type
             return APIHelper.json_deserialize(_context.response.raw_body, MessagesDto.from_dictionary)
 
@@ -164,22 +158,22 @@ class AppUsersController(BaseController):
         """
         try:
             self.logger.info('get_app_user_using_get called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for get_app_user_using_get.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/users/{appUserId}'
-            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, { 
+            _query_builder = APIHelper.append_url_with_template_parameters(_query_builder, {
                 'appUserId': app_user_id
             })
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for get_app_user_using_get.')
             _headers = {
                 'accept': 'application/json'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for get_app_user_using_get.')
             _request = self.http_client.get(_query_url, headers=_headers)
@@ -195,7 +189,7 @@ class AppUsersController(BaseController):
             elif _context.response.status_code == 404:
                 raise APIException('Not Found', _context)
             self.validate_response(_context)
-    
+
             # Return appropriate type
             return APIHelper.json_deserialize(_context.response.raw_body, AppUserDto.from_dictionary)
 
@@ -220,19 +214,19 @@ class AppUsersController(BaseController):
         """
         try:
             self.logger.info('get_app_users_using_get called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for get_app_users_using_get.')
             _query_builder = Configuration.base_uri
             _query_builder += '/v1/conversations/users'
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare headers
             self.logger.info('Preparing headers for get_app_users_using_get.')
             _headers = {
                 'accept': 'application/json'
             }
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for get_app_users_using_get.')
             _request = self.http_client.get(_query_url, headers=_headers)
@@ -248,7 +242,7 @@ class AppUsersController(BaseController):
             elif _context.response.status_code == 404:
                 raise APIException('Not Found', _context)
             self.validate_response(_context)
-    
+
             # Return appropriate type
             return APIHelper.json_deserialize(_context.response.raw_body, AppUsersDto.from_dictionary)
 

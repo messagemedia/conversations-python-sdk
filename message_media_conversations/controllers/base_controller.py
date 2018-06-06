@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversationscontrollers.base_controller
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
 
 from ..api_helper import APIHelper
 from ..http.http_context import HttpContext
@@ -32,7 +27,7 @@ class BaseController(object):
     http_call_back = None
 
     global_headers = {
-        'user-agent': 'messagesmedia-conversations'
+        'user-agent': 'messagesmedia-conversations-sdk-1.0.0'
     }
 
     def __init__(self, client=None, call_back=None):

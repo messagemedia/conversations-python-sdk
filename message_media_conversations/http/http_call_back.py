@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-    message_media_conversations.http.http_call_back
-
-    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
-"""
 
 class HttpCallBack(object):
 
