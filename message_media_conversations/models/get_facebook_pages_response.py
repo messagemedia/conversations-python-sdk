@@ -1,38 +1,34 @@
 # -*- coding: utf-8 -*-
 
 """
-    message_media_conversations.models.base_message_dto
+    message_media_conversations.models.get_facebook_pages_response
 
     This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
 """
 
 
-class BaseMessageDto(object):
+class GetFacebookPagesResponse(object):
 
-    """Implementation of the 'BaseMessageDto' model.
+    """Implementation of the 'Get Facebook pages response' model.
 
     TODO: type model description here.
 
     Attributes:
-        text (string): TODO: type description here.
-        channel (string): TODO: type description here.
+        data (list of object): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "text":'text',
-        "channel":'channel'
+        "data":'data'
     }
 
     def __init__(self,
-                 text=None,
-                 channel=None):
-        """Constructor for the BaseMessageDto class"""
+                 data=None):
+        """Constructor for the GetFacebookPagesResponse class"""
 
         # Initialize members of the class
-        self.text = text
-        self.channel = channel
+        self.data = data
 
 
     @classmethod
@@ -53,11 +49,9 @@ class BaseMessageDto(object):
             return None
 
         # Extract variables from the dictionary
-        text = dictionary.get('text')
-        channel = dictionary.get('channel')
+        data = dictionary.get('data')
 
         # Return an object of this model
-        return cls(text,
-                   channel)
+        return cls(data)
 
 

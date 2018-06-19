@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+"""
+    message_media_conversations.http.http_response
+
+    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
+"""
+
 class HttpResponse(object):
 
     """Information about an HTTP Response including its status code, returned

@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+"""
+    message_media_conversationscontrollers.base_controller
+
+    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
+"""
 
 from ..api_helper import APIHelper
 from ..http.http_context import HttpContext
@@ -27,7 +32,7 @@ class BaseController(object):
     http_call_back = None
 
     global_headers = {
-        'user-agent': 'messagesmedia-conversations-sdk-1.0.0'
+        'user-agent': 'messagesmedia-conversations'
     }
 
     def __init__(self, client=None, call_back=None):
@@ -91,5 +96,7 @@ class BaseController(object):
             context (HttpContext): The HttpContext of the API call.
 
         """
-        if (context.response.status_code < 200) or (context.response.status_code > 208): #[200,208] = HTTP OK
+        if context.response.status_code == 400:
+            raise APIException('The account is not provisioned.', context)
+        elif (context.response.status_code < 200) or (context.response.status_code > 208): #[200,208] = HTTP OK
             raise APIException('HTTP response not OK.', context)

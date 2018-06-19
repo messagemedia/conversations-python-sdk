@@ -1,38 +1,38 @@
 # -*- coding: utf-8 -*-
 
 """
-    message_media_conversations.models.base_message_dto
+    message_media_conversations.models.configure_account_request
 
     This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
 """
 
 
-class BaseMessageDto(object):
+class ConfigureAccountRequest(object):
 
-    """Implementation of the 'BaseMessageDto' model.
+    """Implementation of the 'Configure account request' model.
 
     TODO: type model description here.
 
     Attributes:
-        text (string): TODO: type description here.
-        channel (string): TODO: type description here.
+        name (string): TODO: type description here.
+        callback_url (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "text":'text',
-        "channel":'channel'
+        "name":'name',
+        "callback_url":'callback_url'
     }
 
     def __init__(self,
-                 text=None,
-                 channel=None):
-        """Constructor for the BaseMessageDto class"""
+                 name=None,
+                 callback_url=None):
+        """Constructor for the ConfigureAccountRequest class"""
 
         # Initialize members of the class
-        self.text = text
-        self.channel = channel
+        self.name = name
+        self.callback_url = callback_url
 
 
     @classmethod
@@ -53,11 +53,11 @@ class BaseMessageDto(object):
             return None
 
         # Extract variables from the dictionary
-        text = dictionary.get('text')
-        channel = dictionary.get('channel')
+        name = dictionary.get('name')
+        callback_url = dictionary.get('callback_url')
 
         # Return an object of this model
-        return cls(text,
-                   channel)
+        return cls(name,
+                   callback_url)
 
 

@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 
+"""
+    message_media_conversations.models.message_dto
 
-from message_media_conversations.api_helper import APIHelper
+    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
+"""
+
 
 class MessageDto(object):
 
@@ -13,7 +17,7 @@ class MessageDto(object):
         channel (string): TODO: type description here.
         id (string): TODO: type description here.
         text (string): TODO: type description here.
-        timestamp (datetime): TODO: type description here.
+        timestamp (string): TODO: type description here.
 
     """
 
@@ -36,7 +40,7 @@ class MessageDto(object):
         self.channel = channel
         self.id = id
         self.text = text
-        self.timestamp = APIHelper.RFC3339DateTime(timestamp) if timestamp else None
+        self.timestamp = timestamp
 
 
     @classmethod
@@ -60,10 +64,12 @@ class MessageDto(object):
         channel = dictionary.get('channel')
         id = dictionary.get('id')
         text = dictionary.get('text')
-        timestamp = APIHelper.RFC3339DateTime.from_value(dictionary.get("timestamp")).datetime if dictionary.get("timestamp") else None
+        timestamp = dictionary.get('timestamp')
 
         # Return an object of this model
         return cls(channel,
                    id,
                    text,
                    timestamp)
+
+

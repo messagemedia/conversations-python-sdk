@@ -1,38 +1,42 @@
 # -*- coding: utf-8 -*-
 
 """
-    message_media_conversations.models.base_message_dto
+    message_media_conversations.models.get_app_user_by_id_response
 
     This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
 """
 
 
-class BaseMessageDto(object):
+class GetAppUserByIdResponse(object):
 
-    """Implementation of the 'BaseMessageDto' model.
+    """Implementation of the 'Get app user by id response' model.
 
     TODO: type model description here.
 
     Attributes:
-        text (string): TODO: type description here.
-        channel (string): TODO: type description here.
+        id (string): TODO: type description here.
+        surname (string): TODO: type description here.
+        given_name (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "text":'text',
-        "channel":'channel'
+        "id":'id',
+        "surname":'surname',
+        "given_name":'given_name'
     }
 
     def __init__(self,
-                 text=None,
-                 channel=None):
-        """Constructor for the BaseMessageDto class"""
+                 id=None,
+                 surname=None,
+                 given_name=None):
+        """Constructor for the GetAppUserByIdResponse class"""
 
         # Initialize members of the class
-        self.text = text
-        self.channel = channel
+        self.id = id
+        self.surname = surname
+        self.given_name = given_name
 
 
     @classmethod
@@ -53,11 +57,13 @@ class BaseMessageDto(object):
             return None
 
         # Extract variables from the dictionary
-        text = dictionary.get('text')
-        channel = dictionary.get('channel')
+        id = dictionary.get('id')
+        surname = dictionary.get('surname')
+        given_name = dictionary.get('given_name')
 
         # Return an object of this model
-        return cls(text,
-                   channel)
+        return cls(id,
+                   surname,
+                   given_name)
 
 
