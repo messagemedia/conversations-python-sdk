@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+"""
+   message_media_conversations.api_helper
+
+   This file was automatically generated for MessageMedia  by APIMATIC v2.0 ( https://apimatic.io )
+"""
 
 import re
 import sys

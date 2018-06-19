@@ -1,38 +1,34 @@
 # -*- coding: utf-8 -*-
 
 """
-    message_media_conversations.models.base_message_dto
+    message_media_conversations.models.get_facebook_authorisation_url_response
 
     This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io )
 """
 
 
-class BaseMessageDto(object):
+class GetFacebookAuthorisationURLResponse(object):
 
-    """Implementation of the 'BaseMessageDto' model.
+    """Implementation of the 'Get Facebook authorisation URL response' model.
 
     TODO: type model description here.
 
     Attributes:
-        text (string): TODO: type description here.
-        channel (string): TODO: type description here.
+        authorisation_url (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "text":'text',
-        "channel":'channel'
+        "authorisation_url":'authorisation_url'
     }
 
     def __init__(self,
-                 text=None,
-                 channel=None):
-        """Constructor for the BaseMessageDto class"""
+                 authorisation_url=None):
+        """Constructor for the GetFacebookAuthorisationURLResponse class"""
 
         # Initialize members of the class
-        self.text = text
-        self.channel = channel
+        self.authorisation_url = authorisation_url
 
 
     @classmethod
@@ -53,11 +49,9 @@ class BaseMessageDto(object):
             return None
 
         # Extract variables from the dictionary
-        text = dictionary.get('text')
-        channel = dictionary.get('channel')
+        authorisation_url = dictionary.get('authorisation_url')
 
         # Return an object of this model
-        return cls(text,
-                   channel)
+        return cls(authorisation_url)
 
 

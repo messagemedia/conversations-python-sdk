@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+"""
+    message_media_conversations.http.http_context
+
+    This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
+"""
+
 class HttpContext(object):
 
     """An HTTP Context that contains both the original HttpRequest
